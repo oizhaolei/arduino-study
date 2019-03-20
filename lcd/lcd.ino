@@ -41,19 +41,19 @@
 */
 
 // include the library code:
-#include <LiquidCrystal.h>  
+#include <LiquidCrystal.h>
 
-#define Trig 6 //引脚Tring 连接 IO D2
-#define Echo 7 //引脚Echo 连接 IO D3 
+#define Trig 6 //引脚Tring 连接 IO
+#define Echo 7 //引脚Echo 连接 IO
 
 // initialize the library by associating any needed LCD interface pin
 // with the arduino pin number it is connected to
 const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;
 LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
 
- 
+
 float cm; //距离变量
-float temp; // 
+float temp; //
 
 void setup() {
   pinMode(Trig, OUTPUT);
@@ -72,19 +72,19 @@ void loop() {
   digitalWrite(Trig,HIGH); //给Trig发送一个高电平
   delayMicroseconds(10);    //等待 10微妙
   digitalWrite(Trig, LOW); //给Trig发送一个低电平
-  
+
   temp = float(pulseIn(Echo, HIGH)); //存储回波等待时间,
   //pulseIn函数会等待引脚变为HIGH,开始计算时间,再等待变为LOW并停止计时
   //返回脉冲的长度
-  
+
   //声速是:340m/1s 换算成 34000cm / 1000000μs => 34 / 1000
   //因为发送到接收,实际是相同距离走了2回,所以要除以2
   //距离(厘米)  =  (回波时间 * (34 / 1000)) / 2
   //简化后的计算公式为 (回波时间 * 17)/ 1000
-  
+
   cm = (temp * 17 )/1000; //把回波时间换算成cm
 
-  
+
   // set the cursor to column 0, line 1
   // (note: line 1 is the second row, since counting begins with 0):
   lcd.setCursor(0, 1);

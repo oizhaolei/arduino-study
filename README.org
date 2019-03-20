@@ -1,4 +1,6 @@
 * LCD display + 超声波
+https://www.arduino.cc/en/Tutorial/HelloWorld
+[[./arduino-Ultrasonic-sensor.png]]
 ** LCD
   The circuit:
  - LCD RS pin to digital pin 12
@@ -14,5 +16,21 @@
  - ends to +5V and ground
  - wiper to LCD VO pin (pin 3)
 ** 超声波
-  - 引脚Tring 连接 IO D2
-  - 引脚Echo 连接 IO D3
+  - 引脚Tring 连接 IO D6
+  - 引脚Echo 连接 IO D7
+
+* Nokia 5110 + 超声波
+
+** 5110
+  - 1-VCC -> +5V
+  - 2-GND -> Ground
+  - 3-SCE -> Arduino digital pin 7
+  - 4-RST -> Arduino digital pin 6
+  - 5-DC  -> Arduino digital pin 5
+  - 6-DN  -> Arduino digital pin 4
+  - 7-SCLK-> Arduino digital pin 3
+  - 8-LED -> 3.3V
+[[./5110.jpg]]
+** 超声波
+  - 引脚Tring 连接 IO D12
+  - 引脚Echo 连接 IO D13
