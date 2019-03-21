@@ -35,6 +35,10 @@ https://www.arduino.cc/en/Tutorial/HelloWorld
   - 引脚Tring 连接 IO D12
   - 引脚Echo 连接 IO D13
 * 激光
-S：信号端（接13号引脚）
-+：VCC（5V）
--：接地
+ - S：信号端（接13号引脚）
+ - +：VCC（5V）
+ - -：接地
+* PS2游戏摇杆模块
+ - 摇杆上的GND和VCC接主板的GND和VCC
+ - X和Y接模拟A0和A1
+ - SW（button)接数字7
