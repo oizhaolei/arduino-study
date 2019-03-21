@@ -34,3 +34,7 @@ https://www.arduino.cc/en/Tutorial/HelloWorld
 ** 超声波
   - 引脚Tring 连接 IO D12
   - 引脚Echo 连接 IO D13
+* 激光
+S：信号端（接13号引脚）
++：VCC（5V）
+-：接地
