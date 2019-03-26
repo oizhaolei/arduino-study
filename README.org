@@ -42,3 +42,9 @@ https://www.arduino.cc/en/Tutorial/HelloWorld
  - 摇杆上的GND和VCC接主板的GND和VCC
  - X和Y接模拟A0和A1
  - SW（button)接数字7
+* 门禁卡
+* 人体感应
+  - LED -> Arduino digital pin 7 OUTPUT
+  - 探测-> Arduino digital pin 13 INPUT
+
+* 直流发动机
